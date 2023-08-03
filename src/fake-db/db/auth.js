@@ -7,9 +7,9 @@ const userList = [
   {
     id: 1,
     role: 'SA',
-    name: 'Jason Alexander',
-    username: 'jason_alexander',
-    email: 'jason@ui-lib.com',
+    name: 'Veysel Turan',
+    username: 'veysel_turan',
+    email: 'veysel@ui-lib.com',
     avatar: '/assets/images/face-6.jpg',
     age: 25
   }

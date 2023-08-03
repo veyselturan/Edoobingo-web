@@ -22,7 +22,7 @@ export const navigations = [
     name: 'Video Eğitim',
     icon: 'security',
     children: [
-      { name: 'Video Ekle', iconText: 'SI', path: '/session/signin' },
+      { name: 'Video Ekle', iconText: 'SI', path: '/pages/videoadd' },
       { name: 'Video Listele', iconText: 'SU', path: '/session/signup' },
       { name: 'Video Düzenle', iconText: 'FP', path: '/session/forgot-password' },
       { name: 'Toplu Video Atama', iconText: '404', path: '/session/404' }

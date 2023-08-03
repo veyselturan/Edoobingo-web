@@ -18,6 +18,9 @@ const AppEchart = Loadable(lazy(() => import('app/views/charts/echarts/AppEchart
 // dashboard page
 const Analytics = Loadable(lazy(() => import('app/views/dashboard/Analytics')));
 
+//admin page
+const VideoAdd = Loadable(lazy(() => import('app/views/pages/VideoAdd')));
+
 const routes = [
   {
     element: (
@@ -39,6 +42,13 @@ const routes = [
         path: '/charts/echarts',
         element: <AppEchart />,
         auth: authRoles.editor
+      },
+
+      //admin pages route
+      {
+        path: '/pages/videoadd',
+        element: <VideoAdd />,
+        auth: authRoles.admin
       }
     ]
   },
@@ -50,7 +60,10 @@ const routes = [
   { path: '/session/forgot-password', element: <ForgotPassword /> },
 
   { path: '/', element: <Navigate to="dashboard/default" /> },
-  { path: '*', element: <NotFound /> }
+  { path: '*', element: <NotFound /> },
+
+  //admin pages route
+  { path: '/pages/videoadd', element: <VideoAdd /> }
 ];
 
 export default routes;
