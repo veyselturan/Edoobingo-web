@@ -23,8 +23,8 @@ export const navigations = [
     icon: 'security',
     children: [
       { name: 'Video Ekle', iconText: 'SI', path: '/pages/videoadd' },
-      { name: 'Video Listele', iconText: 'SU', path: '/session/signup' },
-      { name: 'Video Düzenle', iconText: 'FP', path: '/session/forgot-password' },
+      { name: 'Video Listele', iconText: 'SU', path: '/pages/videolist' },
+      { name: 'Video Düzenle', iconText: 'FP', path: '/pages/videoedit' },
       { name: 'Toplu Video Atama', iconText: '404', path: '/session/404' }
     ]
   },

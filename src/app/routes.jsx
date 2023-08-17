@@ -6,6 +6,7 @@ import Loadable from './components/Loadable';
 import MatxLayout from './components/MatxLayout/MatxLayout';
 import materialRoutes from 'app/views/material-kit/MaterialRoutes';
 
+
 // session pages
 const NotFound = Loadable(lazy(() => import('app/views/sessions/NotFound')));
 const JwtLogin = Loadable(lazy(() => import('app/views/sessions/JwtLogin')));
@@ -20,6 +21,9 @@ const Analytics = Loadable(lazy(() => import('app/views/dashboard/Analytics')));
 
 //admin page
 const VideoAdd = Loadable(lazy(() => import('app/views/pages/VideoAdd')));
+const VideoEdit = Loadable(lazy(() => import('app/views/pages/VideoEdit')));
+const VideoList = Loadable(lazy(() => import('app/views/pages/VideoList')));
+
 
 const routes = [
   {
@@ -49,6 +53,16 @@ const routes = [
         path: '/pages/videoadd',
         element: <VideoAdd />,
         auth: authRoles.admin
+      },
+      {
+        path: '/pages/videoedit',
+        element: <VideoEdit />,
+        auth: authRoles.admin
+      },
+      {
+        path: '/pages/videolist',
+        element: <VideoList />,
+        auth: authRoles.admin
       }
     ]
   },
@@ -63,7 +77,7 @@ const routes = [
   { path: '*', element: <NotFound /> },
 
   //admin pages route
-  { path: '/pages/videoadd', element: <VideoAdd /> }
+  
 ];
 
 export default routes;
